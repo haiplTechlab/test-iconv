@@ -33,7 +33,7 @@ func NewReaderFromConverter(source io.Reader, converter *Converter) (reader *Rea
 	reader.converter = converter
 
 	// create 8K buffers
-	reader.buffer = make([]byte, 8*1024)
+	reader.buffer = make([]byte, 10000*1024)
 
 	return reader
 }
