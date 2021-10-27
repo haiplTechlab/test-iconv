@@ -30,7 +30,7 @@ func NewWriterFromConverter(destination io.Writer, converter *Converter) (writer
 	writer.converter = converter
 
 	// create 8K buffers
-	writer.buffer = make([]byte, 100*1024)
+	writer.buffer = make([]byte, 10000*1024)
 
 	return writer
 }
